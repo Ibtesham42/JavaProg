@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        int a = 0, b= 1;
+        int c,n,i;
+        Scanner sc =  new Scanner(System.in);
+        System.out.println("Enter Number ");
+        n = sc.nextInt();
+        System.out.println(a+ " " +b);
+        for( i = 1;i<=n; i++)
+        {
+            c = a + b;
+            System.out.println(" "+c);
+            a=b;
+            b=c;
+
+        }
+
+    }
+}
+//by ibt
