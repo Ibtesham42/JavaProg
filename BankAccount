@@ -1,0 +1,99 @@
+import java.util.Scanner;
+class bank
+{
+	Scanner inn=new Scanner(System.in);
+	String name;
+	int ano;
+	String type;
+	int	balance;
+	void getdata()
+	{
+	System.out.println("Enter Account name :");
+	name=inn.nextLine();
+	System.out.println("Enter Account number :");
+	ano=inn.nextInt();
+	String s=inn.nextLine();
+	System.out.println("Enter Type");
+	type=inn.nextLine();
+	System.out.println("Enter balance");
+	balance=inn.nextInt();
+	}
+	void cal()
+	{
+	int d;
+	System.out.println("Enter Account number :");
+	ano=inn.nextInt();
+	System.out.println("Deposit Some amount Please:");
+	d=inn.nextInt();
+	balance=balance+d;
+	}
+	void withdraw()
+	{
+	int w;
+	System.out.println("Enter Account number :");
+	ano=inn.nextInt();
+	System.out.println("Enter the amount you want to withdraw:");
+	w=inn.nextInt();
+	if(balance>=w)
+	{
+	balance=balance-w;
+	}
+	else
+	{
+	System.out.println(":Nai be bhai tur poisa (Tar lebel saa):");
+	}
+	}
+	void dis()
+	{
+	System.out.println();
+		
+	System.out.println(" Name  "+name);
+	System.out.println(" Account number  "+ano);
+	System.out.println(" Account type "+type);
+	System.out.println(" Balance  "+balance);
+	}
+}
+class bankac
+{
+	public static void main(String arg[])
+	{
+		bank a1=new bank();
+		Scanner inn=new Scanner(System.in);
+		
+		int ch;
+		System.out.println("1.Account details");
+		System.out.println("2.Deposite");
+		System.out.println("3.Withdraw");
+		System.out.println("4.Updated account Details");
+		ch=inn.nextInt();
+	switch(ch)
+	{
+		case 1:
+		a1.getdata();
+		break;
+		case 2:
+		a1.cal();
+		break;
+		case 3: 
+		a1.withdraw();
+		break;
+		case 4:
+		a1.dis();
+		break;
+		default:
+		System.out.println("Abe bhai ki fal2 toi");
+	}
+	
+	
+	/*a1.getdata();
+	a1.cal();
+	a1.withdraw();
+	a1.dis();*/
+	}
+	}
+	
+	
+	
+	
+	
+	
